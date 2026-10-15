@@ -11,5 +11,6 @@ export const projects:Project[]=[
 {slug:'todo-app',name:'ToDo App Challenge',category:'Frontend Mentor',description:'Desafio de interface de tarefas, com foco em HTML semântico e CSS.',stack:['HTML','CSS','Flexbox'],github:gh('todo-app-challenge')},
 {slug:'fylo',name:'Fylo Landing Page',category:'Frontend Mentor',description:'Desafio de landing page de duas colunas.',stack:['HTML','CSS','Flexbox'],github:gh('Challenge-FrontEndMentor')},
 {slug:'clipboard',name:'Clipboard Landing Page',category:'Frontend Mentor',description:'Landing page desenvolvida como desafio de interface.',stack:['HTML','CSS','Flexbox'],github:gh('clipboard-landing-page')},
-{slug:'grafico-de-despesas',name:'Gráfico de Despesas',category:'Frontend Mentor',description:'Componente de visualização de despesas.',stack:['HTML','CSS','JavaScript'],github:gh('graficoDespesas')}
+{slug:'grafico-de-despesas',name:'Gráfico de Despesas',category:'Frontend Mentor',description:'Componente de visualização de despesas.',stack:['HTML','CSS','JavaScript'],github:gh('graficoDespesas')},
+{slug:'somos-todos-a-anastacia',name:'Somos Todos a Anastácia',category:'Projeto web',description:'Projeto Somos Todos a Anastácia. Contexto, funcionalidades, tecnologias e imagens reais serão complementados com o material do projeto.',stack:[],status:'Em documentação',note:'Aguardando informações e capturas reais para apresentar o projeto com precisão.'}
 ];
