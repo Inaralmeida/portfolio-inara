@@ -1,6 +1,5 @@
 'use client';
-import Link from 'next/link';
-import {usePathname} from 'next/navigation';
 import {useState} from 'react';
-import {ArrowUpRight,Menu,X} from 'lucide-react';
-export default function SiteHeader(){const [open,setOpen]=useState(false);const pathname=usePathname();return <header className="site-header"><div className="shell header-inner"><Link href="/" className="wordmark" onClick={()=>setOpen(false)}>INARA<span>✳</span></Link><nav className={open?'site-nav open':'site-nav'} aria-label="Navegação principal">{[['/','Início'],['/projetos/','Projetos'],['/sobre/','Sobre mim'],['/contato/','Contato']].map(([url,label])=><Link onClick={()=>setOpen(false)} aria-current={pathname===url?'page':undefined} href={url} key={url}>{label}</Link>)}</nav><Link className="header-cta" href="/contato/">Vamos conversar <ArrowUpRight size={16}/></Link><button className="nav-toggle" aria-label={open?'Fechar menu':'Abrir menu'} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></header>}
+import {Menu,X,ArrowUpRight} from 'lucide-react';
+const links=[['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre'],['#stack','Stack'],['#contato','Contato']];
+export default function SiteHeader(){const [open,setOpen]=useState(false);return <header className="site-header"><div className="shell header-inner"><a className="wordmark" href="#inicio" onClick={()=>setOpen(false)}>inara<span>.</span>dev</a><nav className={open?'site-nav open':'site-nav'} aria-label="Navegação principal">{links.map(([href,label])=><a key={href} href={href} onClick={()=>setOpen(false)}>{label}</a>)}</nav><a className="header-cta" href="#contato">Vamos conversar <ArrowUpRight size={16}/></a><button type="button" className="nav-toggle" aria-label={open?'Fechar menu':'Abrir menu'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></header>}
