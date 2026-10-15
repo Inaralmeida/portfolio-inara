@@ -8,6 +8,7 @@ export default function SiteHeader(){
  useEffect(()=>{
   const update=()=>{
    const sections=links.map(([href])=>({href,el:document.querySelector(href)})).filter((x):x is {href:string;el:Element}=>!!x.el);
+   sections.sort((a,b)=>(a.el.getBoundingClientRect().top-b.el.getBoundingClientRect().top));
    const y=window.scrollY+Math.max(135,window.innerHeight*.22);
    let current='#inicio';
    for(const s of sections){if(s.el.getBoundingClientRect().top+window.scrollY<=y)current=s.href;}
