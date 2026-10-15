@@ -351,3 +351,11 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 @media(max-width:950px){.hero-static{grid-template-columns:1fr;gap:22px;min-height:0}.hero-static .hero-side{min-height:405px;width:min(100%,630px);margin:auto}.statement-layout{grid-template-columns:1fr;gap:25px}.statement-layout .hero-info-panel{max-width:630px}.project-grid-carousel{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.hero{padding-top:30px}.hero-static{gap:18px}.hero-static h1{font-size:39px}.hero-static .hero-subtitle{font-size:19px}.hero-static .hero-description{font-size:15px}.hero-static .hero-side{min-height:345px}.hero-static .hero-contact-card{right:0;bottom:0}.project-carousel{display:none}.project-mobile-track{display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;padding:3px 24px 16px 0;scrollbar-width:thin;-webkit-overflow-scrolling:touch}.project-mobile-track .project-card{flex:0 0 100%;width:100%;scroll-snap-align:start;min-width:0}.project-mobile-track .project-preview{height:215px}.statement-section{padding-top:65px;padding-bottom:45px}.statement-layout h2{font-size:32px}.statement-layout .hero-subtitle{font-size:19px}.statement-layout p{font-size:15px}#projetos{padding-bottom:45px}#sobre{padding-top:50px}}
 @media(prefers-reduced-motion:reduce){.hero-portrait-scene .avatar-code{animation:none}}
+
+
+/* Hero portrait: preserve the uploaded artwork and its alpha channel. */
+.hero-portrait-scene .portrait-hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;transform:none;border:0;border-radius:0;filter:none;-webkit-mask-image:none;mask-image:none;z-index:1}
+.hero-portrait-scene:has(.portrait-hero-art) .portrait-backplate,.hero-portrait-scene:has(.portrait-hero-art) .portrait-orbit,.hero-portrait-scene:has(.portrait-hero-art) .portrait-spark{display:none}
+.hero-portrait-scene .avatar-code{z-index:3}
+.hero-portrait-scene .hello-bubble{z-index:3}
+@media(max-width:650px){.hero-portrait-scene .portrait-hero-art{width:100%;height:100%;object-fit:contain}}
