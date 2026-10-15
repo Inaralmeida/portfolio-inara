@@ -7,7 +7,7 @@ Portfólio pessoal em **Next.js, React e TypeScript**, com visual tech/dark e la
 - **Smilink** — sistema acadêmico completo, segundo case em destaque.
 - **Paraweb** — site institucional.
 - **Finanças Mais 2.0** — projeto didático de arquitetura, SOLID e TDD.
-- **PokeGO**, DevJobs, Jogo da Forca, Pedra/Papel/Tesoura/Lagarto/Spock, ToDo Challenge, Fylo, Clipboard, Gráfico de Despesas e Pokédex.
+- DevJobs, Jogo da Forca, Pedra/Papel/Tesoura/Lagarto/Spock, ToDo Challenge, Fylo, Clipboard, Gráfico de Despesas e Pokédex.
 
 ## Rodar localmente
 ```sh
