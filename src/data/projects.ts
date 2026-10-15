@@ -1,0 +1,17 @@
+export type Project = {name:string; category:string; description:string; stack:string[]; github?:string; demo?:string; featured?:boolean; status?:string; screenshot?:string; note?:string};
+const gh=(repo:string)=>'https://github.com/Inaralmeida/'+repo;
+export const projects:Project[]=[
+{name:'Nia',category:'Produto SaaS',description:'Plataforma de gestão para pequenos negócios com arquitetura multiempresa, cadastro de insumos, produtos, estoque, orçamentos e pedidos. Produto em desenvolvimento.',stack:['Next.js','React','TypeScript','Supabase'],featured:true,status:'Em desenvolvimento',note:'Acesso ao sistema sujeito a autenticação; nenhuma tela interna ou dado de cliente foi publicado.'},
+{name:'Smilink',category:'Sistema acadêmico',description:'Sistema de gestão de atendimentos em saúde desenvolvido para a faculdade. Inclui módulos de agenda, consultas, pacientes, profissionais, estoque, perfis de acesso, prontuários e dashboards.',stack:['React','TypeScript','Vite','Material UI','React Hook Form','Zod'],featured:true,status:'Projeto acadêmico',github:gh('smilink'),note:'Sem exibição de dados pessoais ou telas restritas.'},
+{name:'Paraweb',category:'Site institucional',description:'Site institucional com conteúdos sobre histórias de vida, acessibilidade, representatividade feminina e tecnologia.',stack:['Web','Acessibilidade'],github:gh('paraweb'),featured:true},
+{name:'Finanças Mais 2.0',category:'Estudos e arquitetura',description:'Projeto de aprendizagem em gestão financeira, criado para praticar componentes, arquitetura, princípios SOLID e desenvolvimento orientado por testes. Não é apresentado como produto comercial.',stack:['React','TypeScript','Vite','Jest','Cypress'],github:gh('financasMais2.0'),featured:true},
+{name:'PokeGO',category:'Aplicação web',description:'Catálogo de Pokémon integrado à PokéAPI, com listagem e busca por nome ou ID.',stack:['React','PokéAPI'],github:gh('Pokego'),demo:'https://pokegoresiliente.netlify.app/'},
+{name:'DevJobs',category:'Interfaces',description:'Projeto relacionado a uma interface de vagas. Documentação funcional disponível no repositório.',stack:[],github:gh('devjobs')},
+{name:'Jogo da Forca',category:'Jogos',description:'Projeto de lógica e interação baseado no clássico jogo da forca.',stack:[],github:gh('jogoDaForca')},
+{name:'Pedra, Papel, Tesoura, Lagarto, Spock',category:'Jogos',description:'Implementação do jogo de escolhas com regras expandidas.',stack:['React','TypeScript','Vite'],github:gh('PedraPapelTesouraLagartoSpock')},
+{name:'ToDo App Challenge',category:'Frontend Mentor',description:'Desafio de interface de tarefas, com foco em HTML semântico e CSS.',stack:['HTML','CSS','Flexbox'],github:gh('todo-app-challenge')},
+{name:'Fylo Landing Page',category:'Frontend Mentor',description:'Desafio de landing page de duas colunas.',stack:['HTML','CSS','Flexbox'],github:gh('Challenge-FrontEndMentor')},
+{name:'Clipboard Landing Page',category:'Frontend Mentor',description:'Landing page desenvolvida como desafio de interface.',stack:['HTML','CSS','Flexbox'],github:gh('clipboard-landing-page')},
+{name:'Gráfico de Despesas',category:'Frontend Mentor',description:'Componente de visualização de despesas.',stack:['HTML','CSS','JavaScript'],github:gh('graficoDespesas')},
+{name:'Pokédex',category:'Aplicação web',description:'Aplicação React de temática Pokémon. Detalhes das funcionalidades dependem de revisão do código.',stack:['React'],github:gh('pokedex')}
+];
