@@ -10,7 +10,7 @@ export default function SiteHeader(){
    const sections=links.map(([href])=>({href,el:document.querySelector(href)})).filter((x):x is {href:string;el:Element}=>!!x.el);
    const y=window.scrollY+Math.max(135,window.innerHeight*.22);
    let current='#inicio';
-   for(const s of sections){if((s.el as HTMLElement).offsetTop<=y)current=s.href;}
+   for(const s of sections){if(s.el.getBoundingClientRect().top+window.scrollY<=y)current=s.href;}
    setActive(current);
   };
   update();window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);
