@@ -542,3 +542,20 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 .experience-list .timeline-popover p{font-size:12px;line-height:1.7;color:#d6e5f1}
 @media(max-width:850px){.experience-list .timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.experience-list .timeline{display:grid;grid-template-columns:1fr;overflow:visible;scroll-snap-type:none}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{min-height:0;flex-basis:auto;padding:18px}}
+
+
+/* Linha do tempo restaurada: eixo contínuo, marcadores e cartões fixos acima de cada ponto. */
+.experience-list .timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;min-height:0;align-items:end;overflow:visible;padding:14px 0 0;position:relative}
+.experience-list .timeline::before{display:block;content:"";position:absolute;left:5%;right:5%;bottom:9px;top:auto;height:3px;background:linear-gradient(90deg,#316ea8,#5baafa);border-radius:4px}
+.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{display:flex;flex-direction:column-reverse;justify-content:flex-start;align-items:center;gap:15px;position:relative;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0 6px 0;height:auto;min-height:0;min-width:0}
+.experience-list .timeline-point,.experience-list .timeline-item.above .timeline-point{position:relative;top:auto;bottom:auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;flex-wrap:nowrap;gap:5px;margin:0;width:100%;padding:0;text-align:center}
+.experience-list .timeline-point strong,.experience-list .timeline-item.above .timeline-point strong{margin:5px 0 0;font-size:12px;line-height:1.3}
+.experience-list .timeline-point small{margin:0;font-size:11px}
+.experience-list .timeline-marker{order:3;width:19px;height:19px;flex:0 0 19px;border:4px solid #69b7ff;background:#09243c;border-radius:50%;box-shadow:0 0 0 3px #09243c;z-index:2;margin-top:6px}
+.experience-list .timeline-popover,.experience-list .timeline-item.above .timeline-popover,.experience-list .timeline-item.below .timeline-popover,.experience-list .timeline-item:first-child .timeline-popover,.experience-list .timeline-item:last-child .timeline-popover{position:relative;inset:auto;top:auto;bottom:auto;left:auto;right:auto;display:block;visibility:visible;opacity:1;pointer-events:auto;transform:none!important;transition:none;width:100%;height:auto;margin:0;padding:14px 12px;background:#163650;border:1px solid #4a89bc;border-radius:13px;box-shadow:0 8px 22px #0003}
+.experience-list .timeline-popover strong{display:block;font-size:13px}
+.experience-list .timeline-popover span{font-size:11px}
+.experience-list .timeline-popover p{font-size:11px;line-height:1.55}
+@media(max-width:1100px){.experience-list .timeline{grid-template-columns:repeat(6,minmax(190px,1fr));overflow-x:auto;overflow-y:visible;scroll-snap-type:x proximity;padding-bottom:8px}.experience-list .timeline-item{scroll-snap-align:start}}
+@media(max-width:560px){.experience-list .timeline{display:grid;grid-template-columns:repeat(6,240px);overflow-x:auto;scroll-snap-type:x mandatory;gap:0}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{padding:0 7px;min-height:0;flex-basis:auto}}
+.skill-icon-brand svg{color:#111827!important;stroke:#111827!important;display:block;width:28px;height:28px}
