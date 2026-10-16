@@ -607,3 +607,7 @@ main > .hero,main > section.hero{padding-bottom:42px}
  .experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{grid-row:1 / 4;min-height:0;padding:0 4px}
  .experience-list .timeline-popover,.experience-list .timeline-item.above .timeline-popover,.experience-list .timeline-item.below .timeline-popover{width:100%;min-height:220px}
 }
+
+/* Contato: alinhar o texto e o rótulo pelo topo da coluna de links. */
+#contato .contact-layout{align-items:start}
+#contato .contact-layout>.reveal{align-self:start}
