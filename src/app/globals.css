@@ -520,3 +520,10 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 .gallery-overview-item span{font-size:11px;line-height:1.35;padding:2px 2px 3px}
 @media(max-width:850px){.gallery-overview{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
 @media(max-width:550px){.gallery-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gallery-overview-item span{font-size:11px}}
+
+/* Show the entire project cover without cropping */
+.project-modal .modal-art{height:clamp(300px,42vw,460px);background:#102c47;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.project-modal .modal-art>img{width:100%;height:100%;object-fit:contain;object-position:center}
+.skill-icon-brand{background:#fff!important;border:1px solid #e3e8ee!important;border-radius:11px;display:grid;place-items:center}
+.skill-icon-brand img{width:74%;height:74%;object-fit:contain;filter:none!important;opacity:1!important}
+@media(max-width:650px){.project-modal .modal-art{height:clamp(230px,65vw,330px)}}
