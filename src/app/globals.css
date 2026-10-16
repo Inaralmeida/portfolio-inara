@@ -527,3 +527,18 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 .skill-icon-brand{background:#fff!important;border:1px solid #e3e8ee!important;border-radius:11px;display:grid;place-items:center}
 .skill-icon-brand img{width:74%;height:74%;object-fit:contain;filter:none!important;opacity:1!important}
 @media(max-width:650px){.project-modal .modal-art{height:clamp(230px,65vw,330px)}}
+
+/* Timeline: cartões sempre visíveis, sem hover nem sobreposição. */
+.experience-list .timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;min-height:0;align-items:stretch;overflow:visible;padding:10px 0}
+.experience-list .timeline::before{display:none}
+.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;height:auto;min-height:0;padding:20px;background:#12314c;border:1px solid #356b94;border-radius:16px;flex-basis:auto;box-shadow:0 8px 24px #0002}
+.experience-list .timeline-point,.experience-list .timeline-item.above .timeline-point{position:static;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px;padding:0;margin:0 0 12px;width:100%;text-align:left;top:auto;bottom:auto}
+.experience-list .timeline-point strong,.experience-list .timeline-item.above .timeline-point strong{margin:0;font-size:14px}
+.experience-list .timeline-point small{margin-left:auto;font-size:11px}
+.experience-list .timeline-marker{width:13px;height:13px;flex:0 0 13px;border:3px solid #69b7ff;box-shadow:none}
+.experience-list .timeline-popover,.experience-list .timeline-item.above .timeline-popover,.experience-list .timeline-item.below .timeline-popover,.experience-list .timeline-item:first-child .timeline-popover,.experience-list .timeline-item:last-child .timeline-popover{position:static;display:block;visibility:visible;opacity:1;pointer-events:auto;transform:none!important;transition:none;width:100%;height:auto;inset:auto;top:auto;bottom:auto;left:auto;right:auto;margin:0;padding:12px 0 0;border:0;border-top:1px solid #3b6e98;border-radius:0;box-shadow:none;background:transparent}
+.experience-list .timeline-popover strong{display:none}
+.experience-list .timeline-popover span{font-size:12px;color:#8ac7ff}
+.experience-list .timeline-popover p{font-size:12px;line-height:1.7;color:#d6e5f1}
+@media(max-width:850px){.experience-list .timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.experience-list .timeline{display:grid;grid-template-columns:1fr;overflow:visible;scroll-snap-type:none}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{min-height:0;flex-basis:auto;padding:18px}}
