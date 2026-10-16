@@ -22,7 +22,7 @@ export default function SiteHeader(){
   <nav className={open?'site-nav open':'site-nav'} aria-label="Navegação principal">
    {links.map(([href,label])=><a key={href} href={href} aria-current={active===href?'location':undefined} className={active===href?'is-active':''} onClick={()=>{setOpen(false);setActive(href)}}>{label}</a>)}
   </nav>
-  <a className="header-cta" href="/portfolio-inara/curriculo-inara-almeida.html" download="Curriculo-Inara-Almeida.html">Baixar currículo <Download size={17}/></a>
+  <a className="header-cta" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/curriculo-inara-almeida.pdf`} download="Curriculo-Inara-Almeida.pdf">Baixar currículo <Download size={17}/></a>
   <button type="button" className="nav-toggle" aria-label={open?'Fechar menu':'Abrir menu'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>
  </div></header>;
 }
