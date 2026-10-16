@@ -579,3 +579,21 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 .experience-list .timeline-popover p{font-size:13px;line-height:1.65;margin-top:11px}
 @media(max-width:1390px){.experience-list .timeline{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;grid-template-columns:repeat(6,240px);padding-bottom:14px}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{scroll-snap-align:start}}
 @media(max-width:560px){.experience-list .timeline{display:grid;grid-template-columns:repeat(6,260px);min-height:660px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:0;padding:0 0 14px}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{display:grid;grid-template-rows:minmax(0,1fr) 26px minmax(0,1fr);min-height:640px;padding:0 7px}.experience-list .timeline-popover p{font-size:13px}}
+
+
+/* Ritmo vertical uniforme entre as seções, com respiro menor. */
+main > .section,main > section.section{padding-top:64px;padding-bottom:64px}
+main > .hero,main > section.hero{padding-bottom:42px}
+#projetos{padding-top:58px}
+#sobre{padding-bottom:54px}
+#stack{padding-top:54px;padding-bottom:56px}
+#contato{padding-top:58px;padding-bottom:64px}
+.experience-list{margin-top:44px}
+.experience-list>p{margin-bottom:16px}
+/* Cards mais largos e com altura visual uniforme em cada lado do eixo. */
+.experience-list .timeline{grid-template-columns:repeat(6,minmax(260px,1fr));min-height:560px}
+.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{min-height:560px}
+.experience-list .timeline-popover,.experience-list .timeline-item.above .timeline-popover,.experience-list .timeline-item.below .timeline-popover{min-height:232px;box-sizing:border-box;padding:17px 16px}
+.experience-list .timeline::before{left:10px;right:10px}
+@media(max-width:1690px){.experience-list .timeline{grid-template-columns:repeat(6,270px);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:12px}}
+@media(max-width:650px){main > .section,main > section.section{padding-top:46px;padding-bottom:46px}main > .hero,main > section.hero{padding-bottom:26px}#projetos{padding-top:42px}#sobre{padding-bottom:42px}#stack{padding-top:42px;padding-bottom:42px}#contato{padding-top:42px}.experience-list{margin-top:34px}.experience-list .timeline{grid-template-columns:repeat(6,270px);min-height:580px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory}.experience-list .timeline-item,.experience-list .timeline-item.above,.experience-list .timeline-item.below{min-height:560px}.experience-list .timeline-popover,.experience-list .timeline-item.above .timeline-popover,.experience-list .timeline-item.below .timeline-popover{min-height:230px}}
