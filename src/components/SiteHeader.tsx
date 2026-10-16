@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useState} from 'react';
 import {Menu,X,Download} from 'lucide-react';
-const links=[['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre mim'],['#experiencia','Experiência'],['#stack','Stack'],['#contato','Contato']];
+const links=[['#inicio','Início'],['#projetos','Projetos'],['#sobre','Sobre mim'],['#experiencia','Experiência'],['#stack','Tecnologias'],['#contato','Contato']];
 export default function SiteHeader(){
  const [open,setOpen]=useState(false);
  const [active,setActive]=useState('#inicio');
