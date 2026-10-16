@@ -611,3 +611,10 @@ main > .hero,main > section.hero{padding-bottom:42px}
 /* Contato: alinhar o texto e o rótulo pelo topo da coluna de links. */
 #contato .contact-layout{align-items:start}
 #contato .contact-layout>.reveal{align-self:start}
+
+/* Ação explícita nos cards, inclusive em telas touch sem hover. */
+.project-card{cursor:pointer}
+.project-card-action{display:inline-flex;align-items:center;gap:7px;color:#9ed6ff;font-size:12px;font-weight:700;line-height:1.4;margin:2px 0 4px}
+.project-card-action svg{flex-shrink:0;transition:transform .2s ease}
+.project-card:hover .project-card-action svg,.project-card:focus-visible .project-card-action svg{transform:translate(2px,-2px)}
+.project-card:focus-visible{outline:2px solid #9ed6ff;outline-offset:4px}
