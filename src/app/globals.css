@@ -618,3 +618,13 @@ main > .hero,main > section.hero{padding-bottom:42px}
 .project-card-action svg{flex-shrink:0;transition:transform .2s ease}
 .project-card:hover .project-card-action svg,.project-card:focus-visible .project-card-action svg{transform:translate(2px,-2px)}
 .project-card:focus-visible{outline:2px solid #9ed6ff;outline-offset:4px}
+
+/* Duas ações explícitas nos projetos; sem depender de hover. */
+.project-card{cursor:default;display:flex;flex-direction:column}
+.project-card .project-body{display:flex;flex-direction:column;flex:1;min-width:0}
+.project-card .project-body>.project-tech{margin-bottom:16px}
+.project-card-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:auto}
+.project-card-buttons .btn{width:100%;min-width:0;min-height:42px;padding:10px 8px;font-size:11px;line-height:1.35;text-align:center;gap:5px;white-space:normal}
+.project-card-buttons .btn svg{flex-shrink:0}
+.project-card-buttons .demo-pending{opacity:.55;cursor:not-allowed}
+@media(max-width:650px){.project-card-buttons{gap:8px}.project-card-buttons .btn{font-size:11px;padding:10px 6px}}
