@@ -453,3 +453,17 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 @media(max-width:650px){
  .hero-static .hero-contact-card{position:relative;inset:auto;right:auto;bottom:auto;width:100%;max-width:none;margin:0 auto;padding:16px 18px}
 }
+
+/* Real project gallery with per-screen captions */
+.case-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+.case-gallery-item{margin:0;min-width:0;background:#102d49;border:1px solid #315879;border-radius:16px;overflow:hidden}
+.case-gallery-item img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#e6f1f4}
+.case-gallery-item figcaption{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px}
+.case-gallery-item figcaption span{color:#79baff;font-size:11px;letter-spacing:.12em}
+.case-gallery-item figcaption strong{font-size:17px;color:#fff}
+.case-gallery-item figcaption p{margin:0;color:#c5d9ea;font-size:13px;line-height:1.65}
+.gallery-caption{padding:12px 0 16px;color:#fff}
+.gallery-caption strong{font-size:15px}
+.gallery-caption p{font-size:13px;line-height:1.6;color:#bdd4e9;margin:6px 0 0}
+.gallery-thumbs{max-height:200px;overflow-y:auto}
+@media(max-width:700px){.case-gallery{grid-template-columns:1fr;gap:16px}.case-gallery-item figcaption{padding:14px 16px}.gallery-thumbs{max-height:170px}}
