@@ -512,3 +512,11 @@ main{background:linear-gradient(180deg,#091f35 0%,#0c2b48 33%,#0e304f 65%,#0b254
 .gallery-lightbox-caption strong{font-size:21px;line-height:1.35}
 .gallery-lightbox-caption p{font-size:16px;line-height:1.55;margin:5px 0 0;color:#d9e9f6}
 @media(max-width:650px){.project-modal{width:100%;max-height:calc(100dvh - 12px)}.gallery-overview{grid-template-columns:1fr;gap:12px}.gallery-overview-item span{font-size:13px}.modal-links .btn{flex:1 1 100%}.gallery-lightbox-stage img{max-height:calc(100dvh - 190px)}.gallery-lightbox-caption{padding:8px 12px 18px}.gallery-lightbox-caption strong{font-size:16px}.gallery-lightbox-caption p{font-size:13px}}
+
+/* Galeria compacta: quatro miniaturas por linha no desktop */
+.gallery-overview{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gallery-overview-item{gap:6px;padding:7px;border-radius:10px}
+.gallery-overview-item img{aspect-ratio:16/10}
+.gallery-overview-item span{font-size:11px;line-height:1.35;padding:2px 2px 3px}
+@media(max-width:850px){.gallery-overview{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+@media(max-width:550px){.gallery-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gallery-overview-item span{font-size:11px}}
